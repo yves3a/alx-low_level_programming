@@ -13,21 +13,21 @@ int _putchar(char c);
 void print_number(int n)
 
 {
-	unsigned int n1 = 0;
+unsigned int n1 = 0;
 
-	if  (n < 0)
-	{
-		n1 = -n;
-		_putchar('-');
-	}
+if  (n < 0)
+{
+n1 = -n;
+_putchar('-');
+}
 
-	else
-	{
-		n1 = n;
-	}
+else
+{
+	n1 = n;
+}
 
-	if (n1 / 10)
-	{
-		print_number(n1 / 10);
-	}
+if (n1 / 10)
+{
+print_number(n1 / 10);
+}
 }
