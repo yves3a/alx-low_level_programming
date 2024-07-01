@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * main - check the code.
- *
- * Return: Always 0.
+ * add - adds two integers
+ * @n1: integer 1
+ * @n2: integer 2
+ * Description: give two integers, returns sum
+ * Return: sum
  */
-int main(void)
+
+int add(int n1, int n2)
 {
-	print_times_table(3);
-	_putchar('\n');
-	print_times_table(5);
-	_putchar('\n');
-	print_times_table(98);
-	_putchar('\n');
-	print_times_table(12);
-	return (0);
+	int sum;
+
+	sum = n1 + n2;
+
+	return (sum);
 }
