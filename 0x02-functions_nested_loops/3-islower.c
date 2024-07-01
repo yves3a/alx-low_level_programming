@@ -7,14 +7,8 @@
  */
 int _islower(int c)
 {
-	char i;
-
-	i = 'a';
-	for (i <= 'z'; i++)
-	{
-		if (i == 'c')
-			printf("1");
-		else
-			printf("0");
-	}
+	if (c >= 'a' && c >= 'z')
+		printf("1");
+	else
+		printf("0");
 }
