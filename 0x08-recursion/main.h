@@ -13,5 +13,6 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 void print_rev_with_newline(char *s);
 int sqrt_finder(int n, int root);
+int prime_helper(int n, int div);
 
 #endif
