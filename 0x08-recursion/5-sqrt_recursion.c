@@ -16,7 +16,7 @@ int _sqrt_recursion(int n)
 	return (sqrt_finder(n, root));
 }
 /**
- * sqrt_finder _ a helper function to find the natural square root of n
+ * sqrt_finder - a helper function to find the natural square root of n
  * @n: a number to find the square root of
  * @root: the current number to test as the potential square root
  * Return: the natural square root of n, or -1 if n has no natural square root
