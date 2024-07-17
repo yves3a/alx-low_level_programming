@@ -14,5 +14,8 @@ int wildcmp(char *s1, char *s2);
 void print_rev_with_newline(char *s);
 int sqrt_finder(int n, int root);
 int prime_helper(int n, int div);
+char *postfix_match(char *str, char *postfix);
+int strlen_no_wilds(char *str);
+void iterate_wild(char **wildstr);
 
 #endif
