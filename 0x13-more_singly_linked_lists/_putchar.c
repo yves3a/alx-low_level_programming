@@ -8,5 +8,5 @@
  */
 int _putchar (char c)
 {
-	return(wirte(1, &c, 1));
+	return (wirte(1, &c, 1));
 }
