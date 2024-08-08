@@ -4,7 +4,7 @@
 #include <stddef.h>
 
 /**
- * File: it cantains all fuction prototypes
+ * File - it cantains all fuction prototypes
  *	related to this project
  * desc: if declares all of  them.
  */
@@ -14,4 +14,4 @@ void array_iterator(int *array, size_t size, void (*action)(int));
 int int_index(int *array, int size, int (*cmp)(int));
 int (*get_op_func(char *s))(int, int);
 
-#endif 
+#endif
