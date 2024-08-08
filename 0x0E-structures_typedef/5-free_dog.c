@@ -10,13 +10,21 @@ void free_dog(dog_t *d)
 {
 	/*freeing the allocated memory address */
 
-	if (d == NULL)
+	if (d != NULL)
+	{
 		free(d);
-	if (d->name == NULL)
+	}
+	if (d->name != NULL)
+	{
 		free(d->name);
+	}
 
-	if (d->owner == NULL)
+	if (d->owner != NULL)
+	{
 		free(d->owner);
+	}
 	else
+	{
 		return;
+	}
 }
