@@ -2,29 +2,15 @@
 #include <stdlib.h>
 
 /**
- * free_dog - it frees dogs
- * @d: the dog to be freed
+ * free_dog - Frees dogs.
+ * @d: The dog to be freed.
  */
-
 void free_dog(dog_t *d)
 {
-	/*freeing the allocated memory address */
-
-	if (d != NULL)
-	{
-		free(d);
-	}
-	if (d->name != NULL)
-	{
-		free(d->name);
-	}
-
-	if (d->owner != NULL)
-	{
-		free(d->owner);
-	}
-	else
-	{
+	if (d == NULL)
 		return;
-	}
+
+	free(d->owner);
+	free(d->name);
+	free(d);
 }
