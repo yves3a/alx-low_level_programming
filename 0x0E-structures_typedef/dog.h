@@ -19,6 +19,6 @@ struct dog
 	char *name[20];
 	float age;
 	char *owner[20];
-} my_dog;
+}
 
 #endif

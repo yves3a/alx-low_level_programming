@@ -8,7 +8,8 @@
 
 
 /**
- * description: This file cantains the prototypes  and data structures
+ * File: lists.h
+ * description - This file cantains the prototypes  and data structures
  * for this projects.
  *
  */
@@ -24,8 +25,8 @@
  */
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
