@@ -16,9 +16,18 @@
 
 struct dog
 {
-	char *name[20];
+	char *name;
 	float age;
-	char *owner[20];
-}
+	char *owner;
+};
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+/* setting a new data type*/
+
+typedef struct dog dog_t;
+
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 
 #endif
