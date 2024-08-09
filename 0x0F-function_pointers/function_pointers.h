@@ -7,6 +7,8 @@
  * File - it cantains all fuction prototypes
  *	related to this project
  * desc: if declares all of  them.
+ * @name: characters
+ * @f: a function pointer.
  */
 
 void print_name(char *name, void (*f)(char *));
