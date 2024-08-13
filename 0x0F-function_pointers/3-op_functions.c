@@ -1,4 +1,4 @@
-#include <3-calc.h>
+#include "3-calc.h"
 
 /**
  * op_add -it adds the two numbers
@@ -26,7 +26,8 @@ int op_sub(int a, int b)
 	if (a > b)
 		return (a - b);
 	if (b > a)
-		return (b -a);
+		return (b - a);
+	return (0);
 }
 
 /**
@@ -63,7 +64,7 @@ int op_div(int a, int b)
  *	otherwise, prints error
  */
 
-int op_mod(int a, int b);
+int op_mod(int a, int b)
 {
 	return (a % b);
 }

@@ -10,33 +10,38 @@
  *
  */
 
-int main (int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int i, result;
 	int j;
+	char *oper;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] != '+' || argv[2] !='-' || argv[2] != '%' || argv[2] != '*' || '/')
+	i = atoi(argv[1]);
+	j = atoi(argv[3]);
+	oper = argv[2];
+
+	if (get_op_func(oper) == NULL || oper[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((argv[1] == '/' || argv[1] == '%') && argv[3] == 0)
+	if ((*oper == '/' && j == 0) || (*oper == '%' && j == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	i = atoi(argv[1]);
-	j = atoi(argv[3]);
 
-	result = get_op_func(argv[2]);
+	result = get_op_func(oper)(i, j);
 
 	printf("%d\n", result);
+
+	return (0);
 
 }
