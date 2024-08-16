@@ -1,55 +1,62 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
+
 /**
- * print_all - prints anything passed to it.
- * @format: data type format of arguments
- * Return: void.
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
  */
 
 void print_all(const char * const format, ...)
 {
-	int i;
 	char *str;
+	int index = 0;
 	char c;
 	float f;
-	int index = 0;
-
+	int i;
 	va_list list;
 
 	va_start(list, format);
+
 	while (format && format[index])
 	{
 		switch (format[index])
 		{
+			case 'c':
+				c = (char) va_arg(list, int);
+				printf("%c", c);
+				break;
 			case 'i':
 				i = va_arg(list, int);
 				printf("%d", i);
-				break;
-			case 'c':
-				c = (char)va_arg(list, int);
-				printf("%c", c);
 				break;
 			case 'f':
 				f = va_arg(list, double);
 				printf("%f", f);
 				break;
 			case 's':
-				str = va_arg(list, char *);
-				if (str != NULL)
+				str = va_arg(list, char*);
+				if (str == NULL)
+				{
+					printf("(nil)");
+				}
+				else
 				{
 					printf("%s", str);
 				}
-				else
-					printf("(nil)");
+				break;
+
+			default:
 				break;
 		}
-		if (format[index + 1] != '\0' && (format[index] == 's' || format[index] == 'c' || format[index] == 'f' || format[index] == 'i'))
+		if (format[index + 1] != '\0' && (format[index] == 'c' || format[index] == 'i' || format[index] == 'f' || format[index] == 's'))
 		{
 			printf(", ");
 		}
+
 		index++;
 	}
-	va_end(list);
 	printf("\n");
+	va_end(list);
 }
