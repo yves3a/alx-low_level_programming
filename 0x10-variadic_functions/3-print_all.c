@@ -15,28 +15,29 @@ void print_all(const char * const format, ...)
 	char c;
 	float f;
 	int i;
-	va_list list;
 
-	va_start(list, format);
+	va_list args;
+
+	va_start(args, format);
 
 	while (format && format[index])
 	{
 		switch (format[index])
 		{
 			case 'c':
-				c = (char) va_arg(list, int);
+				c = (char) va_arg(args, int);
 				printf("%c", c);
 				break;
 			case 'i':
-				i = va_arg(list, int);
+				i = va_arg(args, int);
 				printf("%d", i);
 				break;
 			case 'f':
-				f = va_arg(list, double);
+				f = va_arg(args, double);
 				printf("%f", f);
 				break;
 			case 's':
-				str = va_arg(list, char*);
+				str = va_arg(args, char*);
 				if (str == NULL)
 				{
 					printf("(nil)");
@@ -58,5 +59,5 @@ void print_all(const char * const format, ...)
 		index++;
 	}
 	printf("\n");
-	va_end(list);
+	va_end(args);
 }
