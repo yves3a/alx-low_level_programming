@@ -15,4 +15,14 @@ void print_all(const char * const format, ...);
  *         a data type corresponding to symbol.
  */
 
+#include <stdarg.h>
+
+typedef struct printer
+{
+	char *symbol;
+	void (*print)(va_list arg);
+
+} printer_t;
+
+
 #endif
