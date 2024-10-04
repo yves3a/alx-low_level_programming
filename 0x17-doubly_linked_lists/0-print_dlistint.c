@@ -11,7 +11,7 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	int index;
+	size_t index;
 	const dlistint_t *ptr;
 
 	ptr = h;
