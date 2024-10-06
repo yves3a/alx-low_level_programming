@@ -15,12 +15,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int position = 0;
 
 	if ((*head) == NULL)
-	{
 		return (-1);
-	}
 
-	/* case where index is zero */
-	temp = *head;
+	temp = *head;/* case where index is zero */
 	if (index == 0)
 	{
 		*head = (*head)->next;
@@ -31,7 +28,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	/* iterating the list to find a node at index - 1 */
+	/* iterating the list to find a nod    e at index - 1 */
 	while (temp != NULL && position < index - 1)
 	{
 		temp = temp->next;
@@ -41,9 +38,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	/* If temp is NULL or temp->next is NULL, index is out of range */
 	if (temp == NULL || temp->next == NULL)
 		return (-1);
-
-	/* Case when deleting the last node */
-	if (temp->next->next == NULL)
+	if (temp->next->next == NULL)/* Case when deleting the last node */
 	{
 		temp2 = temp->next;
 		temp->next = NULL;
