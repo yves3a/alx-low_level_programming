@@ -1,6 +1,12 @@
 #ifndef HASH_TABLES_H
 #define HASH_TABLES_H
 
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
 /**
  * A header file for the whole project of hash tables in c
  * It contains prototypes of all functions to be used.
