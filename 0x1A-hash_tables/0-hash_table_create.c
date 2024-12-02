@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * hash_table_create - it creates a hash table
- * @size: size of the array
- *
- * Return: a pointer to the newly created hash table
- */
+* hash_table_create - Creates a hash table
+* @size: The size of the array
+*
+* Return: A pointer to the newly created hash table,
+*		   or NULL if memory allocation fails
+*/
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
@@ -18,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (table == NULL)
 		return (NULL);
 
-	/* allocate memory for the array of pointers */
+	/* Allocate memory for the array of pointers */
 	table->array = calloc(size, sizeof(hash_node_t *));
 	if (table->array == NULL)
 	{
@@ -26,10 +27,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	/* Initialise all array elements to NULL */
+	/* Initialize all array elements to NULL */
 	for (i = 0; i < size; i++)
-		table->array[i] = NULL;
+	table->array[i] = NULL;
 
 	table->size = size;
+
 	return (table);
 }
