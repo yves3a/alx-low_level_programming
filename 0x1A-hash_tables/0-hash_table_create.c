@@ -1,35 +1,36 @@
+#include <stdlib.h>
 #include "hash_tables.h"
-
 /**
- * hash_table_create - creates a hash table
- * @size: the size of the array
+ * hash_table_create - Creates a hash table
+ * @size: The size of the array in the hash table
  *
- * Return: a pointer to the newly created hash table
+ * Return: A pointer to the newly created hash table,
+ *         or NULL if something went wrong.
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hash_map;
+	hash_table_t *hash_table;
+	unsigned long int i;
 
-	/* check for invalid sizes, e.g. when size is 0 */
-	if (!size)
-		return (NULL);
+	/* Allocate memory for the hash table structure */
+	hash_table = malloc(sizeof(hash_table_t));
+	if (hash_table == NULL)
+		return (NULL); /* Failed to allocate memory */
 
-	/* allocate memory for the entire hash map / table */
-	hash_map = malloc(sizeof(hash_table_t));
-	if (hash_map == NULL)
-		return (NULL); /* memory allocation failed */
-
-	hash_map->size = size;
-
-	/* allocate memory and initialize the array of linked lists */
-	hash_map->array = calloc(hash_map->size, sizeof(hash_node_t *));
-	if (hash_map->array == NULL)
+	/* Allocate memory for the array */
+	hash_table->array = malloc(size * sizeof(hash_node_t *));
+	if (hash_table->array == NULL)
 	{
-		free(hash_map);
-		hash_map = NULL;
-		return (NULL); /* memory allocation failed for the array */
+		free(hash_table);
+		return (NULL); /* Failed to allocate memory */
 	}
 
-	/* return the newly created hash map */
-	return (hash_map);
+	/* Initialize each cell of the array with NULL */
+	for (i = 0; i < size; i++)
+		hash_table->array[i] = NULL;
+
+	/* Set the size of the hash table */
+	hash_table->size = size;
+
+	return (hash_table);
 }
