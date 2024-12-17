@@ -3,7 +3,7 @@
 /**
  * hash_table_delete - a function that delets hash tables
  * @ht: pointer to hash tables
- * 
+ *
  * Return: Nothing.
  */
 
