@@ -1,62 +1,51 @@
 #include "hash_tables.h"
 
 /**
- * shash_table_create - creates a sorted hash table structure
- * @size: size of sorted hash table structure
+ * shash_table_create - Creates a sorted hash table
+ * @size: The size of the hash table
  *
- * Return: pointer to the newly created sorted hash table
- *		or NULL if the something went wrong
+ * Return: A pointer to the created hash table
  */
-
 shash_table_t *shash_table_create(unsigned long int size)
 {
-	shash_table_t *sht;
+	shash_table_t *ht;
 	unsigned long int i;
-	/* allocating memory for the sorted hash table */
-	sht = malloc(sizeof(shash_table_t));
-	if (sht == NULL)
+
+	ht = malloc(sizeof(shash_table_t));
+	if (ht == NULL)
 		return (NULL);
 
-	/* Allocating memory fo the array */
-	sht->array = malloc(size * sizeof(shash_node_t*));
-	if (sht->array == NULL)
+	ht->size = size;
+	ht->array = malloc(size * sizeof(shash_node_t *));
+	if (ht->array == NULL)
 	{
-		free(sht);
+		free(ht);
 		return (NULL);
 	}
 
-	/* Initialising each cell of the array with NULL */
 	for (i = 0; i < size; i++)
-		sht->array[i] = NULL;
+		ht->array[i] = NULL;
 
-	/*Initailises sorted list pointers*/
-	sht->shead = NULL;
-	sht->stail = NULL;
+	ht->shead = NULL;
+	ht->stail = NULL;
 
-	/*Initialise the size field*/
-	sht->size = size;
-
-	return (sht);
+	return (ht);
 }
 
 /**
- * create_node - it creates a node.
- * @key: pointer to the key of that node
- * @value: pointer to the value of that node
+ * create_node - Creates a new node with the given key and value
+ * @key: The key string
+ * @value: The value string
  *
- * Return: pointer to that new_node.
+ * Return: A pointer to the created node
  */
-
 shash_node_t *create_node(const char *key, const char *value)
 {
 	shash_node_t *new_node;
 
 	new_node = malloc(sizeof(shash_node_t));
 	if (new_node == NULL)
-	{
-		free(new_node);
 		return (NULL);
-	}
 
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
@@ -68,81 +57,73 @@ shash_node_t *create_node(const char *key, const char *value)
 }
 
 /**
- * shash_table_set - it adds an element to the hash table
- * @key: pointer to the key
- * @value: pointer to the value
+ * shash_table_set - Adds or updates a key/value pair in the sorted hash table
+ * @ht: The sorted hash table
+ * @key: The key string
+ * @value: The value string
  *
- * Return: 1 on success, otherwise 0.
+ * Return: 1 if succeeded, 0 otherwise
  */
-
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	shash_node_t *current, *new_node, *prev_node;
 	unsigned long int index;
+	shash_node_t *node, *prev_node, *new_node;
 
-	if (!ht || !key || !value|| !*key)
-		return 0;
+	if (ht == NULL || key == NULL || strlen(key) == 0)
+		return (0);
 
-	index = key_index((const unsigned char *) key, ht->size);
+	index = key_index((const unsigned char *)key, ht->size);
 
-	current = ht->array[index];
+	node = ht->array[index];
 	prev_node = NULL;
 
-	while (current != NULL && strcmp(current->key, key))
+	while (node != NULL && strcmp(node->key, key) < 0)
 	{
-		prev_node = current;
-		current = current->next;
+		prev_node = node;
+		node = node->next;
 	}
 
-	/* if key already exist, update its value */
-	if (current != NULL && strcmp(current->key, key) == 0)
+	if (node != NULL && strcmp(node->key, key) == 0)
 	{
-		free(current->value);
-		current->value = strdup(value);
+		free(node->value);
+		node->value = strdup(value);
 		return (1);
 	}
 
-	/* Create a new node for the key_value pair */
-	new_node = create_node(key,value);
+	new_node = create_node(key, value);
 	if (new_node == NULL)
 		return (0);
 
-	/* inserting the new node into the hash table's array */
 	if (prev_node == NULL)
 	{
-		current = ht->array[index];
-		prev_node->next = current;
+		new_node->next = ht->array[index];
+		ht->array[index] = new_node;
 	}
 	else
 	{
-		current = prev_node->next;
-		prev_node->next = current;
+		new_node->next = prev_node->next;
+		prev_node->next = new_node;
 	}
 
-	/* Insert the new node into the sorted linked list */
 	if (ht->shead == NULL || strcmp(key, ht->shead->key) < 0)
 	{
-		new_node->next = ht->shead;
+		new_node->snext = ht->shead;
 		ht->shead = new_node;
 	}
 	else
 	{
-		/* Traverse sorted list to find the corect position */
-		current = ht->shead;
-		while (current->snext != NULL && strcmp(key, current->snext->key) > 0)
-			current = new_node->snext;
+		node = ht->shead;
+		while (node->snext != NULL && strcmp(key, node->snext->key) > 0)
+			node = node->snext;
 
-		/* Insert the new_node in the sorted position */
-		new_node->snext = current->snext;
-		current->snext = new_node;
+		new_node->snext = node->snext;
+		node->snext = new_node;
 	}
 
-	/* Update the tail pointer if new node is the last element */
 	if (new_node->snext == NULL)
 		ht->stail = new_node;
 
 	return (1);
-
 }
 
 /**
