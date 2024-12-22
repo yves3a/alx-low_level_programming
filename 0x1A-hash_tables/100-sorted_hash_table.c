@@ -20,13 +20,21 @@ shash_table_t *shash_table_create(unsigned long int size)
 	/* Allocating memory fo the array */
 	sht->array = malloc(size * sizeof(shash_node_t*));
 	if (sht->array == NULL)
+	{
+		free(sht);
 		return (NULL);
+	}
 
 	/* Initialising each cell of the array with NULL */
 	for (i = 0; i < size; i++)
 		sht->array[i] = NULL;
+
+	/*Initailises sorted list pointers*/
 	sht->shead = NULL;
 	sht->stail = NULL;
+
+	/*Initialise the size field*/
+	sht->size = size;
 
 	return (sht);
 }
