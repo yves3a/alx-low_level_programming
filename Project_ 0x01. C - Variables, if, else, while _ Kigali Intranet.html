@@ -1,0 +1,3133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://savanna.alxafrica.com/projects/213 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+      <script type="text/javascript" async="" src="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/js"></script><script async="" src="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/gtm.js"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({"userId":806556,"visitorType":"student","batch":{"id":321,"fullNameWithC":"KGL-0524-blended (C#2-blended)","schoolLocation":{"id":6,"name":"Kigali"}},"curriculum":{"id":1,"name":"SE Foundations"}});
+
+    window.gtm_user_custom_event = function (name, options) {
+      if (typeof name === 'undefined') {
+        return;
+      }
+
+      window.dataLayer.push({
+        customEventOptions: typeof options !== 'undefined' ? options : {},
+        event: name,
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N4C8MF2');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <title>Project: 0x01. C - Variables, if, else, while | Kigali Intranet</title>
+
+      <link rel="stylesheet" href="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/application_alx-86c669cec6c3a27a798acc634b0f2159b34933cb3bcdaa861f67d1191f26a702.css">
+      <script src="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/loader.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="https://savanna.alxafrica.com/favicon_alx.ico">
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="_6XdcxsWlseQBcl-yqmUS9Tz0nGisaibyERiWttyqe91eD3GQx7WNSXTEN1rX75lPVFEOuLRWH6erJZte8b4tQ">
+
+      <link rel="apple-touch-icon" href="https://savanna.alxafrica.com/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          if (typeof Cookies !== 'undefined') {
+            Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+          }
+        });
+      </script>
+
+
+      <!-- React -->
+      <script src="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/app-428e43922931c2898f086f07578f3c9803aefc4438afef32b51950550f478acc.js" data-turbo-track="reload" defer="defer"></script>
+<script src="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/sprockets-c0e56a0d20ac74bcb4df5e9aab8ca9f5adc008dd64356339a335587588218637.js" data-turbo-track="reload" defer="defer"></script>
+      <link rel="stylesheet" media="all" href="./Project_ 0x01. C - Variables, if, else, while _ Kigali Intranet_files/app-af63263adaa999d5979ab3c38d7593c2f2fa24a49bf2b26030dd08b56149029e.css">
+
+
+  </head>
+
+  <body class="signed_in env_production notranslate" translate="no" data-theme-suffix="_alx" data-new-gr-c-s-check-loaded="14.1257.0" data-gr-ext-installed="">
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8MF2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div data-react-class="header/Header" data-react-props="{&quot;csrfToken&quot;:&quot;k61SL_6bmkIAVKGIi4n2w-oWH7MWdz36b14dc1M72pAZcLKappPasLWCeCsqf9ztA7SJ-FYXzR85tulE84-Lyg&quot;,&quot;ehubHeaderSdkJsUrl&quot;:null,&quot;logoUrl&quot;:&quot;https://savanna.alxafrica.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;,&quot;logoutUrl&quot;:&quot;/auth/sign_out&quot;,&quot;logoClickUrl&quot;:&quot;/&quot;,&quot;redirectUrl&quot;:&quot;/auth/sign_in&quot;,&quot;discord&quot;:{&quot;label&quot;:&quot;Discord&quot;,&quot;targetUrl&quot;:&quot;https://discord.com/channels/1148581179084243054&quot;,&quot;linkOpts&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;rel&quot;:&quot;noreferrer&quot;}},&quot;user&quot;:{&quot;myProfileUrl&quot;:&quot;/users/my_profile&quot;,&quot;profilePictureUrl&quot;:&quot;https://savanna.alxafrica.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeWNIRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--feed6ac80f6630338a3899e2ee8504928b32c11e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmtCeUdrQnlBPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596ca5c9d0091ccfe5374ad3fb3471cc1878f984/ID%20PHOTO%20(2).jpg&quot;},&quot;listItems&quot;:[{&quot;label&quot;:&quot;My Planning&quot;,&quot;iconName&quot;:&quot;calendar&quot;,&quot;targetUrl&quot;:&quot;/planning/me&quot;},{&quot;label&quot;:&quot;Projects&quot;,&quot;iconName&quot;:&quot;code-fork&quot;,&quot;targetUrl&quot;:&quot;/projects/current&quot;,&quot;id&quot;:&quot;sidebar-current-projects-item&quot;},{&quot;label&quot;:&quot;QA Reviews I can make&quot;,&quot;iconName&quot;:&quot;check&quot;,&quot;targetUrl&quot;:&quot;/corrections/to_review&quot;},{&quot;label&quot;:&quot;Evaluation quizzes&quot;,&quot;iconName&quot;:&quot;question&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_current_evaluation_quizzes&quot;},{&quot;label&quot;:&quot;My resources&quot;},{&quot;label&quot;:&quot;My courses&quot;,&quot;iconName&quot;:&quot;graduation-cap&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_curriculums&quot;},{&quot;label&quot;:&quot;Concepts&quot;,&quot;iconName&quot;:&quot;file-text&quot;,&quot;targetUrl&quot;:&quot;/concepts&quot;,&quot;id&quot;:&quot;sidebar-concepts-item&quot;},{&quot;label&quot;:&quot;Conference rooms&quot;,&quot;iconName&quot;:&quot;comments&quot;,&quot;targetUrl&quot;:&quot;/dashboards/video_rooms&quot;,&quot;id&quot;:&quot;sidebar-dashboards-video-rooms&quot;},{&quot;label&quot;:&quot;Servers&quot;,&quot;iconName&quot;:&quot;server&quot;,&quot;targetUrl&quot;:&quot;/servers&quot;},{&quot;label&quot;:&quot;Sandboxes&quot;,&quot;iconName&quot;:&quot;terminal&quot;,&quot;targetUrl&quot;:&quot;/user_containers/current&quot;,&quot;id&quot;:&quot;sidebar-dashboards-my-containers&quot;},{&quot;label&quot;:&quot;Tools&quot;,&quot;iconName&quot;:&quot;wrench&quot;,&quot;targetUrl&quot;:&quot;/dashboards/my_tools&quot;},{&quot;label&quot;:&quot;Video on demand&quot;,&quot;iconName&quot;:&quot;film&quot;,&quot;targetUrl&quot;:&quot;/dashboards/videos&quot;},{&quot;label&quot;:&quot;My Campus&quot;},{&quot;label&quot;:&quot;Peers&quot;,&quot;iconName&quot;:&quot;users&quot;,&quot;targetUrl&quot;:&quot;/users/peers&quot;}]}" data-react-cache-id="header/Header-0"><div class="header d-flex align-items-center bg-white border-bottom position-fixed top-0 w-100" style="background-color: white; border-color: rgb(229, 230, 230); z-index: 1000;"><div class="header-left align-items-center d-flex position-fixed px-2" style="z-index: 2;"><div class="hamburger mb-0 p-2" style="cursor: pointer; font-size: 24px;"><i class="fa-solid fa-fas fa-bars"></i></div><a class="logo-container bg-white p-1" href="https://savanna.alxafrica.com/" rel="noreferrer" target=""><div class="logo mx-auto" style="background-image: url(&quot;https://savanna.alxafrica.com/assets/holberton-logo-full-alx-d053727941512ebe04b797ca87d81a195004e9ff2d8a6aedf4004c5365cf8944.png&quot;);"></div></a></div><div class="header-right d-flex align-items-center flex-grow-1 justify-content-center" style="z-index: 1;"></div></div><div class="sidebar navigation bg-white border-end position-fixed overflow-scroll bottom-0 start-0 expanded" id="sidebar" style="background-color: white; border-color: rgb(238, 238, 238);"><ul class="px-2"><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-home"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Home</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/planning/me" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-calendar"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">My Planning</div></a></li><li class="d-flex align-items-center" id="sidebar-current-projects-item"><a href="https://savanna.alxafrica.com/projects/current" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-code-fork"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Projects</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/corrections/to_review" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-check"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">QA Reviews I can make</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/dashboards/my_current_evaluation_quizzes" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-question"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Evaluation quizzes</div></a></li><hr title="My resources"><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/dashboards/my_curriculums" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-graduation-cap"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">My courses</div></a></li><li class="d-flex align-items-center" id="sidebar-concepts-item"><a href="https://savanna.alxafrica.com/concepts" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-file-text"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Concepts</div></a></li><li class="d-flex align-items-center" id="sidebar-dashboards-video-rooms"><a href="https://savanna.alxafrica.com/dashboards/video_rooms" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-comments"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Conference rooms</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/servers" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-server"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Servers</div></a></li><li class="d-flex align-items-center" id="sidebar-dashboards-my-containers"><a href="https://savanna.alxafrica.com/user_containers/current" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-terminal"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Sandboxes</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/dashboards/my_tools" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-wrench"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Tools</div></a></li><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/dashboards/videos" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-film"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Video on demand</div></a></li><hr title="My Campus"><li class="d-flex align-items-center"><a href="https://savanna.alxafrica.com/users/peers" rel="noreferrer" target="_self"><div class="icon "><i aria-hidden="true" class="fa-solid fa-users"></i></div><div class="ps-3 overflow-hidden text-nowrap" style="display: block;">Peers</div></a></li><li class="d-flex align-items-center"><a href="https://discord.com/channels/1148581179084243054" target="_blank" rel="noreferrer"><div class="icon"><i aria-hidden="true" class="fa-brands fa-discord"></i></div><div class="text-muted flex-grow-1 ps-3 overflow-hidden text-nowrap" style="display: block;">Discord</div></a></li><li class="d-flex align-items-center bg-white border-top border-end position-fixed p-2 bottom-0 start-0 mb-0" style="background-color: white; border-color: rgb(238, 238, 238);"><a href="https://savanna.alxafrica.com/users/my_profile"><div class="image "><div class="inner"></div></div><div class="text-muted d-none flex-grow-1 ps-3 overflow-hidden text-nowrap" style="display: block;">My Profile</div></a></li></ul></div></div>
+
+
+    <main class="content" id="content">
+        
+
+        <div id="layout-bars">
+          
+          <div class="px-5 py-3" id="student-switch-curriculum">
+  <div class="btn-group">
+    <div class="align-items-center d-flex gap-3" aria-expanded="false" data-bs-auto-close="outside" data-bs-toggle="dropdown" type="button">
+      <div class="d-flex flex-column" style="line-height: 16px">
+        <span class="fs-4 fw-semibold" style="font-size: 15px !important;">
+          SE Foundations
+        </span>
+        <span class="fs-sm text-muted">
+          Average: <span class="fw-medium">67.09%</span>
+        </span>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center">
+        <span style="margin-bottom: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-up fa-fw"></i>
+        </span>
+        <span style="margin-top: -4px">
+          <i aria-hidden="true" class="fa-solid fa-angle-down fa-fw"></i>
+        </span>
+      </div>
+</div>
+    <ul class="dropdown-menu-400 fs-5 dropdown-menu">
+        <li><a class="dropdown-item" href="https://savanna.alxafrica.com/curriculums/1/observe">
+          <div class="align-items-center d-flex py-2">
+            <div class="d-flex flex-column" style="line-height: 16px">
+              <span class="fs-4 fw-medium" style="font-size: 15px !important;">
+                SE Foundations
+              </span>
+              <span class="text-muted" style="font-size: 14px !important;">
+                Average: <span class="fw-medium">67.09%</span>
+              </span>
+            </div>
+
+              <span class="fw-semibold text-info" style="margin-left: 42px">
+                <i aria-hidden="true" class="fa-solid fa-check"></i>
+              </span>
+          </div>
+</a></li>        <li><a class="dropdown-item" href="https://savanna.alxafrica.com/curriculums/17/observe">
+          <div class="align-items-center d-flex py-2">
+            <div class="d-flex flex-column" style="line-height: 16px">
+              <span class="fs-4 fw-medium" style="font-size: 15px !important;">
+                Short Specializations
+              </span>
+              <span class="text-muted" style="font-size: 14px !important;">
+                Average: <span class="fw-medium">72.3%</span>
+              </span>
+            </div>
+
+          </div>
+</a></li></ul></div></div>
+
+          
+          
+        </div>
+
+      <article class="">
+
+        
+  <div class="d-flex flex-wrap">
+
+    <div class="flex-grow-1" id="curriculum_navigation_content">
+      
+<div class="project row">
+  <div class="col-12 col-xl-10 contains-images">
+    <div id="project_id" style="display: none" data-project-id="213"></div>
+
+    <div class="vstack gap-3">
+        <div class="hstack gap-3 justify-content-between">
+    <h1 class="m-0">
+      0x01. C - Variables, if, else, while
+      
+    </h1>
+
+  </div>
+
+  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:7,&quot;value&quot;:&quot;C&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"><div class="align-items-center d-flex flex-wrap gap-3 my-2"><span class="badge text-bg-primary" style="font-size: 14px;">C</span></div></div>
+
+  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;has_ai_grader&quot;:false,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-06-21T06:00:00.000+02:00&quot;,&quot;ends_at&quot;:&quot;2024-06-22T06:00:00.000+02:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-06-25T06:00:00.000+02:00&quot;},&quot;weight&quot;:1}}" data-react-cache-id="projects/ProjectMetadata-0"><ul class="list-group metadata fs-small" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-gear fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa-solid fa-calendar fa-fw"></i> Project over - took place from <span><span class="datetime">Jun 21, 2024 6:00 AM</span></span> to <span><span class="datetime">Jun 22, 2024 6:00 AM</span></span></li></ul></div>
+
+  <div class="sm-gap clean well">
+  <h4>In a nutshell…</h4>
+  <ul>
+
+
+      <li>
+          42.9/70 mandatory
+            &amp;
+            13.65/21 optional
+      </li>
+    <li>
+      <strong>Final score:</strong>
+        &nbsp;<strong>101.13%</strong>
+        <ul>
+            <li>Mandatory: 61.29%</li>
+              <li>Optional: 65.0%</li>
+            <li>
+              Calculation:&nbsp;
+                  61.29%
+                    + (61.29% * 65.0%)
+              &nbsp;==&nbsp;<strong>101.13%</strong>
+            </li>
+        </ul>
+    </li>
+  </ul>
+
+</div>
+
+
+
+
+
+
+        
+          <div class="card">
+    <h5 class="card-header">Concepts</h5>
+    <div class="card-body">
+      <p>
+        <em>For this project, we expect you to look at this concept:</em>
+      </p>
+
+      <ul>
+          <li>
+            <a href="https://savanna.alxafrica.com/concepts/100039">Struggling with the sandbox? Try this: Using Docker &amp; WSL on your local host</a>
+          </li>
+      </ul>
+</div></div>
+        <div class="card mb-3">
+  <div class="card-body">
+    <h2>Resources</h2>
+
+<p><strong>Read or watch</strong>:</p>
+
+<ul>
+<li><a href="https://savanna.alxafrica.com/rltoken/PkAydT3D9u5pN3nPCAlNZQ" title="Everything you need to know to start with C.pdf" target="_blank">Everything you need to know to start with C.pdf</a> (<em>You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.</em>)</li>
+<li><a href="https://savanna.alxafrica.com/rltoken/58ThnAAxwJv5s_ceKMMPhw" title="Keywords and identifiers" target="_blank">Keywords and identifiers</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/2sXkmDiD7BF7pNIOxMQWFA" title="integers" target="_blank">integers</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/S-b9MN2iELhSEwCI093Vzw" title="Arithmetic Operators in C" target="_blank">Arithmetic Operators in C</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/usvxrTB3ko5kGTq48p5fSA" title="If statements in C" target="_blank">If statements in C</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/CU6mSX1qdZKOhDEgmToUGA" title="if...else statement" target="_blank">if…else statement</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/O1N-qacaTC-BHXm3Dp3eUA" title="Relational operators" target="_blank">Relational operators</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/TaX_y6ll4cRfxCrxG8ZuNQ" title="Logical operators" target="_blank">Logical operators</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/mwx2_bj3gIFEgCqdwdTp4w" title="while loop in C" target="_blank">while loop in C</a> </li>
+<li><a href="https://savanna.alxafrica.com/rltoken/MW4Ob-6JLWt7Zn6vZ0EsBw" title="While loop" target="_blank">While loop</a> </li>
+</ul>
+
+<p><strong>man or help</strong>:</p>
+
+<ul>
+<li><code>ascii</code> (<em>You do not need to learn about <code>scanf</code>, <code>getc</code>, <code>getchar</code>, <code>EOF</code>, <code>EXIT_SUCCESS</code>, <code>time</code>, <code>rand</code>, <code>srand</code>, <code>RAND_MAX</code>, <code>for</code> loops, <code>do...while</code> loops, functions.</em>)</li>
+</ul>
+
+<h2>Additional resources</h2>
+
+<ul>
+<li><a href="https://savanna.alxafrica.com/rltoken/zkPRh2lr09S8VqSuAxQ9OQ" title="Introduction to C (Basic structure and variables)" target="_blank">Introduction to C (Basic structure and variables)</a></li>
+</ul>
+
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="https://savanna.alxafrica.com/rltoken/qBrRkO5QsdzGun5FkaMooQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
+<h3>General</h3>
+
+<ul>
+<li>What are the arithmetic operators and how to use them</li>
+<li>What are the logical operators (sometimes called boolean operators) and how to use them</li>
+<li>What the the relational operators and how to use them</li>
+<li>What values are considered TRUE and FALSE in C</li>
+<li>What are the boolean operators and how to use them</li>
+<li>How to use the <code>if</code>, <code>if ... else</code> statements</li>
+<li>How to use comments</li>
+<li>How to declare variables of types <code>char</code>, <code>int</code>, <code>unsigned int</code></li>
+<li>How to assign values to variables</li>
+<li>How to print the values of variables of type <code>char</code>, <code>int</code>, <code>unsigned int</code> with <code>printf</code></li>
+<li>How to use the <code>while</code> loop</li>
+<li>How to use variables with the <code>while</code> loop</li>
+<li>How to print variables using <code>printf</code></li>
+<li>What is the <code>ASCII</code> character set</li>
+<li>What are the purpose of the <code>gcc</code> flags <code>-m32</code> and <code>-m64</code></li>
+</ul>
+
+<h3>Copyright - Plagiarism</h3>
+
+<ul>
+<li>You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.</li>
+<li>You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work. </li>
+<li>You are not allowed to publish any content of this project.</li>
+<li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
+<ul>
+<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
+<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
+<li>All your files should end with a new line</li>
+<li>A <code>README.md</code> file, at the root of the folder of the project</li>
+<li>There should be no errors and no warnings during compilation</li>
+<li>You are not allowed to use <code>system</code></li>
+<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/alx-tools/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/alx-tools/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
+</ul>
+
+</div></div>
+        
+          <div class="card" id="project-quiz-questions-title">
+    <h5 class="card-header">
+      Quiz questions
+</h5>
+    <div class="card-body">
+
+        <div class="alert alert-info">
+          <strong>Great!</strong>
+          You've completed the quiz successfully! Keep going!
+          <span id="quiz_questions_collapse_toggle">(Show quiz)</span>
+        </div>
+
+      <section class="quiz_questions_show_container" style="display: none;">
+        <div class="vstack gap-3">
+
+            <div class="quiz_question_item_container" data-role="quiz_question374" data-position="6">
+              
+<div class="" id="quiz_question-374">
+    <h5 class="card-title quiz_question">
+        
+        Question #0
+</h5>
+    <!-- Quiz question Body -->
+    <p>Which of the following are valid <code>while</code> or <code>do/while</code> statements in ANSI C and Betty-compliant? (Considering <code>a</code> and <code>b</code> two variables of type <code>int</code>)</p>
+
+<p>Please select all correct answers</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="374">
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207393326" value="1505207393326" data-quiz-answer-id="1505207393326" data-quiz-question-id="374" disabled="disabled" checked="checked">
+  <label for="374-1505207393326"><pre><code>a = 0;
+do {
+    printf("%d\n", a);
+    a++;
+} while (a &lt; b);
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207480827" value="1505207480827" data-quiz-answer-id="1505207480827" data-quiz-question-id="374" disabled="disabled">
+  <label for="374-1505207480827"><pre><code>a = 0;
+do while (a &lt; b)
+{
+    printf("%d\n", a);
+    a++;
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207374138" value="1505207374138" data-quiz-answer-id="1505207374138" data-quiz-question-id="374" disabled="disabled" checked="checked">
+  <label for="374-1505207374138"><pre><code>a = 0;
+while (a &lt; b)
+{
+    printf("%d\n", a);
+    a++;
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207464113" value="1505207464113" data-quiz-answer-id="1505207464113" data-quiz-question-id="374" disabled="disabled">
+  <label for="374-1505207464113"><pre><code>a = 0;
+while (a &lt; b)
+(
+    printf("%d\n", a);
+    a++;
+)
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207361956" value="1505207361956" data-quiz-answer-id="1505207361956" data-quiz-question-id="374" disabled="disabled">
+  <label for="374-1505207361956"><pre><code>while (a = 0; a &lt; b; a++)
+{
+    printf("%d\n", a);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="374" id="374-1505207443831" value="1505207443831" data-quiz-answer-id="1505207443831" data-quiz-question-id="374" disabled="disabled" checked="checked">
+  <label for="374-1505207443831"><pre><code>a = 0;
+while (a &lt; b)
+    printf("%d\n", a++);
+</code></pre>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+              <hr>
+
+            <div class="quiz_question_item_container" data-role="quiz_question370" data-position="3">
+              
+<div class="" id="quiz_question-370">
+    <h5 class="card-title quiz_question">
+        
+        Question #1
+</h5>
+    <!-- Quiz question Body -->
+    <p>What is the size of the <code>float</code> data type?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="370">
+                <li class="">
+
+  <input type="radio" name="370" id="370-1505144017367" value="1505144017367" data-quiz-answer-id="1505144017367" data-quiz-question-id="370" disabled="disabled">
+  <label for="370-1505144017367"><p>2 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="370" id="370-1505144020574" value="1505144020574" data-quiz-answer-id="1505144020574" data-quiz-question-id="370" disabled="disabled" checked="checked">
+  <label for="370-1505144020574"><p>4 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="370" id="370-1505144014089" value="1505144014089" data-quiz-answer-id="1505144014089" data-quiz-question-id="370" disabled="disabled">
+  <label for="370-1505144014089"><p>1 byte</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="370" id="370-1505144025186" value="1505144025186" data-quiz-answer-id="1505144025186" data-quiz-question-id="370" disabled="disabled">
+  <label for="370-1505144025186"><p>8 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+              <hr>
+
+            <div class="quiz_question_item_container" data-role="quiz_question369" data-position="2">
+              
+<div class="" id="quiz_question-369">
+    <h5 class="card-title quiz_question">
+        
+        Question #2
+</h5>
+    <!-- Quiz question Body -->
+    <p>What is the size of the <code>char</code> data type?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="369">
+                <li class="">
+
+  <input type="radio" name="369" id="369-1505144002109" value="1505144002109" data-quiz-answer-id="1505144002109" data-quiz-question-id="369" disabled="disabled">
+  <label for="369-1505144002109"><p>2 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="369" id="369-1505144005674" value="1505144005674" data-quiz-answer-id="1505144005674" data-quiz-question-id="369" disabled="disabled">
+  <label for="369-1505144005674"><p>4 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="369" id="369-1505143999092" value="1505143999092" data-quiz-answer-id="1505143999092" data-quiz-question-id="369" disabled="disabled" checked="checked">
+  <label for="369-1505143999092"><p>1 byte</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="369" id="369-1505144009723" value="1505144009723" data-quiz-answer-id="1505144009723" data-quiz-question-id="369" disabled="disabled">
+  <label for="369-1505144009723"><p>8 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+              <hr>
+
+            <div class="quiz_question_item_container" data-role="quiz_question372" data-position="4">
+              
+<div class="" id="quiz_question-372">
+    <h5 class="card-title quiz_question">
+        
+        Question #3
+</h5>
+    <!-- Quiz question Body -->
+    <p>Which of the following are valid <code>if</code> statements in ANSI C and Betty-compliant? (Considering <code>a</code> and <code>b</code> two variables of type <code>int</code>)</p>
+
+<p>Please select all correct answers</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="372">
+                <li class="">
+
+  <input type="checkbox" name="372" id="372-1505144498321" value="1505144498321" data-quiz-answer-id="1505144498321" data-quiz-question-id="372" disabled="disabled" checked="checked">
+  <label for="372-1505144498321"><pre><code>if (a &gt; b)
+{
+  return (a);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="372" id="372-1505144506749" value="1505144506749" data-quiz-answer-id="1505144506749" data-quiz-question-id="372" disabled="disabled">
+  <label for="372-1505144506749"><pre><code>if {a &gt; b}
+(
+  return {a};
+)
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="372" id="372-1505144455898" value="1505144455898" data-quiz-answer-id="1505144455898" data-quiz-question-id="372" disabled="disabled">
+  <label for="372-1505144455898"><pre><code>if a &gt; b
+{
+  return (a);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="372" id="372-1505144598760" value="1505144598760" data-quiz-answer-id="1505144598760" data-quiz-question-id="372" disabled="disabled" checked="checked">
+  <label for="372-1505144598760"><pre><code>if (a &gt; b)
+  return (a);
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="372" id="372-1505144525558" value="1505144525558" data-quiz-answer-id="1505144525558" data-quiz-question-id="372" disabled="disabled">
+  <label for="372-1505144525558"><pre><code>if ((((((a &gt; b))))))
+{
+  return (a);
+}
+</code></pre>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+              <hr>
+
+            <div class="quiz_question_item_container" data-role="quiz_question373" data-position="5">
+              
+<div class="" id="quiz_question-373">
+    <h5 class="card-title quiz_question">
+        
+        Question #4
+</h5>
+    <!-- Quiz question Body -->
+    <p>Which of the following are valid <code>for</code> statements in ANSI C and Betty-compliant? (Considering <code>a</code> and <code>b</code> two variables of type <code>int</code>)</p>
+
+<p>Please select all correct answers</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="373">
+                <li class="">
+
+  <input type="checkbox" name="373" id="373-1505144894020" value="1505144894020" data-quiz-answer-id="1505144894020" data-quiz-question-id="373" disabled="disabled" checked="checked">
+  <label for="373-1505144894020"><pre><code>for (a = 0; a &lt; b; a++)
+    printf("%d\n", a);
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="373" id="373-1505144899733" value="1505144899733" data-quiz-answer-id="1505144899733" data-quiz-question-id="373" disabled="disabled">
+  <label for="373-1505144899733"><pre><code>for (int a = 0; a &lt; b; a++)
+{
+    printf("%d\n", a);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="373" id="373-1505144733554" value="1505144733554" data-quiz-answer-id="1505144733554" data-quiz-question-id="373" disabled="disabled" checked="checked">
+  <label for="373-1505144733554"><pre><code>for (a = 0; a &lt; b; a++)
+{
+    printf("%d\n", a);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="373" id="373-1505144971399" value="1505144971399" data-quiz-answer-id="1505144971399" data-quiz-question-id="373" disabled="disabled" checked="checked">
+  <label for="373-1505144971399"><pre><code>a = 0;
+for (; a &lt; b;)
+{
+    printf("%d\n", a++);
+}
+</code></pre>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="checkbox" name="373" id="373-1505144916098" value="1505144916098" data-quiz-answer-id="1505144916098" data-quiz-question-id="373" disabled="disabled">
+  <label for="373-1505144916098"><pre><code>a = 0;
+for (a &lt; b;;)
+{
+    printf("%d\n", a++);
+}
+</code></pre>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+              <hr>
+
+            <div class="quiz_question_item_container" data-role="quiz_question368" data-position="1">
+              
+<div class="" id="quiz_question-368">
+    <h5 class="card-title quiz_question">
+        
+        Question #5
+</h5>
+    <!-- Quiz question Body -->
+    <p>What is the size of the <code>unsigned int</code> data type?</p>
+
+
+    <!-- Quiz question Answers -->
+        <ul class="quiz_question_answers" data-question-id="368">
+                <li class="">
+
+  <input type="radio" name="368" id="368-1505143980763" value="1505143980763" data-quiz-answer-id="1505143980763" data-quiz-question-id="368" disabled="disabled">
+  <label for="368-1505143980763"><p>2 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="368" id="368-1505143984248" value="1505143984248" data-quiz-answer-id="1505143984248" data-quiz-question-id="368" disabled="disabled" checked="checked">
+  <label for="368-1505143984248"><p>4 bytes</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="368" id="368-1505143976024" value="1505143976024" data-quiz-answer-id="1505143976024" data-quiz-question-id="368" disabled="disabled">
+  <label for="368-1505143976024"><p>1 byte</p>
+</label>
+</li>
+
+                <li class="">
+
+  <input type="radio" name="368" id="368-1505143987563" value="1505143987563" data-quiz-answer-id="1505143987563" data-quiz-question-id="368" disabled="disabled">
+  <label for="368-1505143987563"><p>8 bytes</p>
+</label>
+</li>
+
+        </ul>
+
+    <!-- Quiz question Tips -->
+</div>
+
+            </div>
+        </div>
+
+      </section>
+</div></div>
+
+          
+            <h2 class="mt-5">Tasks</h2>
+
+  <div class="vstack gap-5">
+      <div data-role="task831" data-position="1" id="task-num-0">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-831">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>0. Positive anything is better than negative nothing</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="831" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>This program will assign a random number to the variable <code>n</code> each time it is executed. Complete the source code in order to print whether the number stored in the variable <code>n</code> is positive or negative.</p>
+
+<ul>
+<li>You can find the source code <a href="https://savanna.alxafrica.com/rltoken/Dg4SuuP8gvRYnE54wktySg" title="here" target="_blank">here</a></li>
+<li>The variable <code>n</code> will store a different value every time you will run this program</li>
+<li>You don’t have to understand what <code>rand</code>, <code>srand</code>, <code>RAND_MAX</code> do. Please do not touch this code</li>
+<li>The output of the program should be:
+
+<ul>
+<li>The number, followed by
+
+<ul>
+<li>if the number is greater than 0: <code>is positive</code></li>
+<li>if the number is 0: <code>is zero</code></li>
+<li>if the number is less than 0: <code>is negative</code></li>
+</ul></li>
+<li>followed by a new line</li>
+</ul></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-positive_or_negative.c -o 0-positive_or_negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-520693284 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-973398895 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-199220452 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+561319348 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+561319348 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+266853958 is positive
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+-48147767 is negative
+julien@ubuntu:~/0x01$ ./0-positive_or_negative 
+0 is zero
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>0-positive_or_negative.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-831-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:831}" data-gtm-custom-event-name="task_checker_modal" data-task-id="831" type="button" class="btn btn-default btn-sm check-your-task-831-modal-button" id="task-num-0-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:831}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-831-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:831}" data-task-id="831" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task832" data-position="2" id="task-num-1">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-832">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>1. The last digit</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="832" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>This program will assign a random number to the variable <code>n</code> each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable <code>n</code>.</p>
+
+<ul>
+<li>You can find the source code <a href="https://savanna.alxafrica.com/rltoken/rud8wr5x6VWeahUtd5P14A" title="here" target="_blank">here</a></li>
+<li>The variable <code>n</code> will store a different value every time you run this program</li>
+<li>You don’t have to understand what <code>rand</code>, <code>srand</code>, and <code>RAND_MAX</code> do. Please do not touch this code</li>
+<li>The output of the program should be:
+
+<ul>
+<li>The string <code>Last digit of</code>, followed by</li>
+<li><code>n</code>, followed by</li>
+<li>the string <code>is</code>, followed by
+
+<ul>
+<li>if the last digit of <code>n</code> is greater than 5: the string <code>and is greater than 5</code></li>
+<li>if the last digit of <code>n</code> is 0: the string <code>and is 0</code></li>
+<li>if the last digit of <code>n</code> is less than 6 and not 0: the string <code>and is less than 6 and not 0</code></li>
+</ul></li>
+<li>followed by a new line</li>
+</ul></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-last_digit.c -o 1-last_digit
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 629438752 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -748255693 is -3 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -1052791662 is -2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -284805734 is -4 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 491506926 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 954249937 is 7 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 652334952 is 2 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of -729688197 is -7 and is less than 6 and not 0
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 45528266 is 6 and is greater than 5
+julien@ubuntu:~/0x01$ ./1-last_digit 
+Last digit of 809065140 is 0 and is 0
+julien@ubuntu:~/0x01$
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>1-last_digit.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-832-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:832}" data-gtm-custom-event-name="task_checker_modal" data-task-id="832" type="button" class="btn btn-default btn-sm check-your-task-832-modal-button" id="task-num-1-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:832}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-832-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:832}" data-task-id="832" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task833" data-position="3" id="task-num-2">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-833">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="833" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints the alphabet in lowercase, followed by a new line.</p>
+
+<ul>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+julien@ubuntu:~/0x01$ ./2-print_alphabet 
+abcdefghijklmnopqrstuvwxyz
+julien@ubuntu:~/0x01$
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>2-print_alphabet.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-833-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:833}" data-gtm-custom-event-name="task_checker_modal" data-task-id="833" type="button" class="btn btn-default btn-sm check-your-task-833-modal-button" id="task-num-2-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:833}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-833-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:833}" data-task-id="833" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task845" data-position="4" id="task-num-3">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-845">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>3. alphABET</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="845" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.</p>
+
+<ul>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> three times in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-print_alphabets.c -o 3-print_alphabets
+julien@ubuntu:~/0x01$ ./3-print_alphabets | cat -e
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>3-print_alphabets.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-845-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:845}" data-gtm-custom-event-name="task_checker_modal" data-task-id="845" type="button" class="btn btn-default btn-sm check-your-task-845-modal-button" id="task-num-3-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:845}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-845-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:845}" data-task-id="845" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task835" data-position="5" id="task-num-4">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-835">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>4. When I was having that alphabet soup, I never thought that it would pay off</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="835" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints the alphabet in lowercase, followed by a new line.</p>
+
+<ul>
+<li>Print all the letters except <code>q</code> and <code>e</code></li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-print_alphabt.c -o 4-print_alphabt
+julien@ubuntu:~/0x01$ ./4-print_alphabt 
+abcdfghijklmnoprstuvwxyz
+julien@ubuntu:~/0x01$ ./4-print_alphabt | grep [eq]
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>4-print_alphabt.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-835-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:835}" data-gtm-custom-event-name="task_checker_modal" data-task-id="835" type="button" class="btn btn-default btn-sm check-your-task-835-modal-button" id="task-num-4-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:835}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-835-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:835}" data-task-id="835" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task836" data-position="6" id="task-num-5">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-836">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>5. Numbers</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="836" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 42.86%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">27.86%</span> (<span class="task_progress_value">Checks completed: 42.86%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all single digit numbers of base 10 starting from <code>0</code>, followed by a new line.</p>
+
+<ul>
+<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-print_numbers.c -o 5-print_numbers
+julien@ubuntu:~/0x01$ ./5-print_numbers 
+0123456789
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>5-print_numbers.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-836-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:836}" data-gtm-custom-event-name="task_checker_modal" data-task-id="836" type="button" class="btn btn-default btn-sm check-your-task-836-modal-button" id="task-num-5-check-code-btn">Dry-run review</button>
+
+            <button class="btn btn-primary btn-sm task_ask_new_correction " data-task-id="836" data-correction-id="36708485">
+              Mark submission
+              <span class="in_progress_info">: in progress...</span>
+              <span class="error_occurred_info">: an error occurred</span>
+            </button>
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:836}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-836-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:836}" data-task-id="836" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task837" data-position="7" id="task-num-6">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-837">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>6. Numberz</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="837" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all single digit numbers of base 10 starting from <code>0</code>, followed by a new line.</p>
+
+<ul>
+<li>You are not allowed to use any variable of type <code>char</code></li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>You can only use <code>putchar</code> twice in your code</li>
+<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-print_numberz.c -o 6-print_numberz
+julien@ubuntu:~/0x01$ ./6-print_numberz 
+0123456789
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>6-print_numberz.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-837-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:837}" data-gtm-custom-event-name="task_checker_modal" data-task-id="837" type="button" class="btn btn-default btn-sm check-your-task-837-modal-button" id="task-num-6-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:837}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-837-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:837}" data-task-id="837" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task838" data-position="8" id="task-num-7">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-838">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>7. Smile in the mirror</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="838" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints the lowercase alphabet in reverse, followed by a new line.</p>
+
+<ul>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> twice in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-print_tebahpla.c -o 7-print_tebahpla
+julien@ubuntu:~/0x01$ ./7-print_tebahpla
+zyxwvutsrqponmlkjihgfedcba
+julien@ubuntu:~/0x01$
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>7-print_tebahpla.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-838-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:838}" data-gtm-custom-event-name="task_checker_modal" data-task-id="838" type="button" class="btn btn-default btn-sm check-your-task-838-modal-button" id="task-num-7-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:838}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-838-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:838}" data-task-id="838" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task839" data-position="9" id="task-num-8">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-839">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>8. Hexadecimal</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="839" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.</p>
+
+<ul>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> three times in your code</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-print_base16.c -o 8-print_base16
+julien@ubuntu:~/0x01$ ./8-print_base16
+0123456789abcdef
+julien@ubuntu:~/0x01$
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>8-print_base16.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-839-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:839}" data-gtm-custom-event-name="task_checker_modal" data-task-id="839" type="button" class="btn btn-default btn-sm check-your-task-839-modal-button" id="task-num-8-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:839}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-839-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:839}" data-task-id="839" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task840" data-position="10" id="task-num-9">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-840">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>9. Patience, persistence and perspiration make an unbeatable combination for success</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            mandatory
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="840" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all possible combinations of single-digit numbers.</p>
+
+<ul>
+<li>Numbers must be separated by <code>,</code>, followed by a space</li>
+<li>Numbers should be printed in ascending order</li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>All your code should be in the <code>main</code> function</li>
+<li>You can only use <code>putchar</code> four times maximum in your code</li>
+<li>You are not allowed to use any variable of type <code>char</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
+julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>9-print_comb.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-840-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:840}" data-gtm-custom-event-name="task_checker_modal" data-task-id="840" type="button" class="btn btn-default btn-sm check-your-task-840-modal-button" id="task-num-9-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:840}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-840-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:840}" data-task-id="840" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task842" data-position="14" id="task-num-10">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-842">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>10. Inventing is a combination of brains and materials. The more brains you use, the less material you need</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            #advanced
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="842" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all possible different combinations of two digits.</p>
+
+<ul>
+<li>Numbers must be separated by <code>,</code>, followed by a space</li>
+<li>The two digits must be different</li>
+<li><code>01</code> and <code>10</code> are considered the same combination of the two digits <code>0</code> and <code>1</code></li>
+<li>Print only the smallest combination of two digits</li>
+<li>Numbers should be printed in ascending order, with two digits</li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>You can only use <code>putchar</code> five times maximum in your code</li>
+<li>You are not allowed to use any variable of type <code>char</code></li>
+<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-print_comb3.c -o 100-print_comb3
+julien@ubuntu:~/0x01$ ./100-print_comb3
+01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>100-print_comb3.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-842-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:842}" data-gtm-custom-event-name="task_checker_modal" data-task-id="842" type="button" class="btn btn-default btn-sm check-your-task-842-modal-button" id="task-num-10-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:842}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-842-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:842}" data-task-id="842" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task843" data-position="15" id="task-num-11">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-843">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>11. The success combination in business is: Do what you do better... and: do more of what you do...</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            #advanced
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="843" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all possible different combinations of three digits.</p>
+
+<ul>
+<li>Numbers must be separated by <code>,</code>, followed by a space</li>
+<li>The three digits must be different</li>
+<li><code>012</code>, <code>120</code>, <code>102</code>, <code>021</code>, <code>201</code>, <code>210</code> are considered the same combination of the three digits <code>0</code>, <code>1</code> and <code>2</code></li>
+<li>Print only the smallest combination of three digits</li>
+<li>Numbers should be printed in ascending order, with three digits</li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>You can only use <code>putchar</code> six times maximum in your code</li>
+<li>You are not allowed to use any variable of type <code>char</code></li>
+<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-print_comb4.c -o 101-print_comb4
+julien@ubuntu:~/0x01$ ./101-print_comb4
+012, 013, 014, 015, 016, 017, 018, 019, 023, 024, 025, 026, 027, 028, 029, 034, 035, 036, 037, 038, 039, 045, 046, 047, 048, 049, 056, 057, 058, 059, 067, 068, 069, 078, 079, 089, 123, 124, 125, 126, 127, 128, 129, 134, 135, 136, 137, 138, 139, 145, 146, 147, 148, 149, 156, 157, 158, 159, 167, 168, 169, 178, 179, 189, 234, 235, 236, 237, 238, 239, 245, 246, 247, 248, 249, 256, 257, 258, 259, 267, 268, 269, 278, 279, 289, 345, 346, 347, 348, 349, 356, 357, 358, 359, 367, 368, 369, 378, 379, 389, 456, 457, 458, 459, 467, 468, 469, 478, 479, 489, 567, 568, 569, 578, 579, 589, 678, 679, 689, 789
+julien@ubuntu:~/0x01$ 
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>101-print_comb4.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-843-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:843}" data-gtm-custom-event-name="task_checker_modal" data-task-id="843" type="button" class="btn btn-default btn-sm check-your-task-843-modal-button" id="task-num-11-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:843}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-843-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:843}" data-task-id="843" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+      <div data-role="task844" data-position="16" id="task-num-12">
+        <div>
+  <span id="user_id" data-id="806556"></span>
+
+  <div class="card task-card" id="task-844">
+    <h5 class="card-header hstack gap-2 justify-content-between"><span>12. Software is eating the World</span>
+      <div class="hstack gap-1">
+          <span class="badge text-bg-info">
+            #advanced
+</span>      </div>
+</h5>
+    <div class="card-body">
+      <!-- Progress vs Score -->
+        <div class="task_progress_score_bar truncate" data-task-id="844" data-correction-id="36708485">
+          <div class="task_progress_bar" style="width: 100.0%">
+            <div class="task_score_bar" style="width: 65.0%">
+            </div>
+          </div>
+          <div class="task_progress_score_text">
+            Score: <span class="task_score_value">65.0%</span> (<span class="task_progress_value">Checks completed: 100.0%</span>)
+          </div>
+        </div>
+
+      <!-- Task Body -->
+      <p>Write a program that prints all possible combinations of two two-digit numbers.</p>
+
+<ul>
+<li>The numbers should range from <code>0</code> to <code>99</code></li>
+<li>The two numbers should be separated by a space</li>
+<li>All numbers should be printed with two digits. <code>1</code> should be printed as <code>01</code></li>
+<li>The combination of numbers must be separated by comma, followed by a space</li>
+<li>The combinations of numbers should be printed in ascending order</li>
+<li><code>00 01</code> and <code>01 00</code> are considered as the same combination of the numbers <code>0</code> and <code>1</code></li>
+<li>You can only use the <code>putchar</code> function (every other function (<code>printf</code>, <code>puts</code>, etc…) is forbidden)</li>
+<li>You can only use <code>putchar</code> eight times maximum in your code</li>
+<li>You are not allowed to use any variable of type <code>char</code></li>
+<li>All your code should be in the <code>main</code> function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 102-print_comb5.c -o 102-print_comb5
+julien@ubuntu:~/0x01$ ./102-print_comb5
+00 01, 00 02, 00 03, 00 04, 00 05, 00 06, 00 07, 00 08, 00 09, 00 10, 00 11, [...] 40 91, 40 92, 40 93, 40 94, 40 95, 40 96, 40 97, 40 98, 40 99, 41 42, 41 43, 41 44, 41 45, 41 46, 41 47, 41 48, 41 49, 41 50, 41 51, 41 52, 41 53 [...] 93 95, 93 96, 93 97, 93 98, 93 99, 94 95, 94 96, 94 97, 94 98, 94 99, 95 96, 95 97, 95 98, 95 99, 96 97, 96 98, 96 99, 97 98, 97 99, 98 99
+</code></pre>
+
+</div>
+    <div class="list-group list-group-flush">
+        <!-- LTI Resource -->
+
+      <!-- Task Files -->
+
+      <!-- Task URLs -->
+
+      <!-- Github information -->
+        <div class="list-group-item">
+          <p><strong>Repo:</strong></p>
+          <ul>
+            <li>GitHub repository: <code>alx-low_level_programming</code></li>
+              <li>Directory: <code>0x01-variables_if_else_while</code></li>
+              <li>File: <code>102-print_comb5.c</code></li>
+          </ul>
+        </div>
+
+      <!-- Self-paced manual review -->
+    </div>
+
+    <!-- Footer - Controls -->
+    
+  <div class="card-footer">
+    <div class="align-items-center d-flex justify-content-between">
+      <div>
+            
+<button data-bs-target="#task-test-correction-844-correction-modal" data-bs-toggle="modal" data-gtm-custom-event-options="{&quot;taskId&quot;:844}" data-gtm-custom-event-name="task_checker_modal" data-task-id="844" type="button" class="btn btn-default btn-sm check-your-task-844-modal-button" id="task-num-12-check-code-btn">Dry-run review</button>
+
+
+          <button class="btn btn-default btn-sm" data-bs-target="#container-specs-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_sandbox_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:844}"><i aria-hidden="true" class="fa-solid fa-terminal"></i><span>Get a sandbox</span></button>
+
+            
+<button data-bs-target="#task-qa-review-844-modal" data-bs-toggle="modal" data-gtm-custom-event-name="task_qa_review_modal" data-gtm-custom-event-options="{&quot;taskId&quot;:844}" data-task-id="844" type="button" class="btn btn-default btn-sm">View results</button>
+      </div>
+
+      <div>
+</div>
+
+    </div>
+</div>
+    
+    
+</div></div>
+
+      </div>
+  </div>
+
+
+
+
+            
+
+    </div>
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
+
+
+      </article>
+
+        <div class="copyright">Copyright © 2025 ALX, All rights reserved.</div>
+
+    </main>
+
+        <button data-bs-target="#search-modal" data-bs-toggle="modal" data-search-active="false" type="button" class="btn btn-primary" id="search-button">    <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+    <i aria-hidden="true" class="fa-solid fa-window-minimize"></i>
+</button>
+
+
+        
+
+  
+
+<div aria-hidden="true" aria-labelledby="task-test-correction-831-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-831-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-831-correction-modal-label">0. Positive anything is better than negative nothing</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="831">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="831">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="831">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-831-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-831-modal" tabindex="-1" data-correction-id="36708485" data-task-id="831"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-831-modal-label">0. Positive anything is better than negative nothing</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-832-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-832-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-832-correction-modal-label">1. The last digit</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="832">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="832">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="832">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-832-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-832-modal" tabindex="-1" data-correction-id="36708485" data-task-id="832"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-832-modal-label">1. The last digit</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-833-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-833-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-833-correction-modal-label">2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="833">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="833">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="833">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-833-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-833-modal" tabindex="-1" data-correction-id="36708485" data-task-id="833"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-833-modal-label">2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-845-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-845-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-845-correction-modal-label">3. alphABET</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="845">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="845">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="845">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-845-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-845-modal" tabindex="-1" data-correction-id="36708485" data-task-id="845"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-845-modal-label">3. alphABET</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-835-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-835-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-835-correction-modal-label">4. When I was having that alphabet soup, I never thought that it would pay off</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="835">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="835">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="835">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-835-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-835-modal" tabindex="-1" data-correction-id="36708485" data-task-id="835"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-835-modal-label">4. When I was having that alphabet soup, I never thought that it would pay off</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-836-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-836-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-836-correction-modal-label">5. Numbers</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="836">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="836">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="836">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-836-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-836-modal" tabindex="-1" data-correction-id="36708485" data-task-id="836"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-836-modal-label">5. Numbers</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-837-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-837-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-837-correction-modal-label">6. Numberz</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="837">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="837">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="837">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-837-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-837-modal" tabindex="-1" data-correction-id="36708485" data-task-id="837"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-837-modal-label">6. Numberz</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-838-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-838-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-838-correction-modal-label">7. Smile in the mirror</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="838">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="838">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="838">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-838-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-838-modal" tabindex="-1" data-correction-id="36708485" data-task-id="838"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-838-modal-label">7. Smile in the mirror</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-839-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-839-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-839-correction-modal-label">8. Hexadecimal</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="839">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="839">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="839">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-839-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-839-modal" tabindex="-1" data-correction-id="36708485" data-task-id="839"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-839-modal-label">8. Hexadecimal</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-840-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-840-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-840-correction-modal-label">9. Patience, persistence and perspiration make an unbeatable combination for success</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="840">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="840">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="840">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-840-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-840-modal" tabindex="-1" data-correction-id="36708485" data-task-id="840"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-840-modal-label">9. Patience, persistence and perspiration make an unbeatable combination for success</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-842-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-842-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-842-correction-modal-label">10. Inventing is a combination of brains and materials. The more brains you use, the less material you need</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="842">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="842">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="842">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-842-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-842-modal" tabindex="-1" data-correction-id="36708485" data-task-id="842"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-842-modal-label">10. Inventing is a combination of brains and materials. The more brains you use, the less material you need</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-843-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-843-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-843-correction-modal-label">11. The success combination in business is: Do what you do better... and: do more of what you do...</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="843">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="843">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="843">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-843-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-843-modal" tabindex="-1" data-correction-id="36708485" data-task-id="843"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-843-modal-label">11. The success combination in business is: Do what you do better... and: do more of what you do...</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-test-correction-844-correction-modal-label" class="modal modal-lg fade student_modal task_correction_modal text-start" id="task-test-correction-844-correction-modal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-test-correction-844-correction-modal-label">12. Software is eating the World</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="actions">
+      <center>
+        <div class="alert alert-info d-none"></div>
+
+        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="844">Request a new review</button>
+        <button class="btn btn-secondary close-modal d-none" data-bs-dismiss="modal" type="button">Close</button>
+
+        <div class="spinner" style="display: none;">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+        <div class="error fw-semibold m-3 text-danger"></div>
+        <div class="info fw-semibold m-3"></div>
+      </center>
+    </div>
+    <div class="result"></div>
+
+    <div class="help">
+  <button data-task-id="844">
+    <i aria-hidden="true" class="fa-solid fa-circle-info"></i>
+  </button>
+  <div class="help-container" data-task-id="844">
+    <div class="check-line">
+      <div class="check-inline requirement success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Requirement success</span>
+      </div>
+      <div class="check-inline requirement fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Requirement fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline code success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Code success</span>
+      </div>
+      <div class="check-inline code fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Code fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline efficiency success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Efficiency success</span>
+      </div>
+      <div class="check-inline efficiency fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Efficiency fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline answer success">
+        <i aria-hidden="true" class="fa-solid fa-circle-check fa-fw"></i><span>Text answer success</span>
+      </div>
+      <div class="check-inline answer fail">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Text answer fail</span>
+      </div>
+    </div>
+    <div class="check-line">
+      <div class="check-inline requirement fail offline">
+        <i aria-hidden="true" class="fa-solid fa-circle-xmark fa-fw"></i><span>Skipped - Previous check failed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div></div></div></div><div aria-hidden="true" aria-labelledby="task-qa-review-844-modal-label" class="modal modal-lg fade task_get_qa_review" id="task-qa-review-844-modal" tabindex="-1" data-correction-id="36708485" data-task-id="844"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="task-qa-review-844-modal-label">12. Software is eating the World</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="review-container">
+      <div class="review-corrector"></div>
+      <div class="review-github well" style="display:none">
+        <h5>Commit used:</h5>
+        <ul>
+          <li style="display:none"><strong>User:</strong> <code class="review-github-id"></code> <span class="review-github-name">---</span></li>
+          <li style="display:none"><strong>URL:</strong> <a class="review-github-url" target="_blank">Click here</a></li>
+          <li style="display:none"><strong>ID:</strong> <code class="review-github-commit_id">---</code></li>
+          <li style="display:none"><strong>Author:</strong> <span class="review-github-committer_username">---</span></li>
+          <li style="display:none"><strong>Subject:</strong> <em class="review-github-subject">---</em></li>
+          <li style="display:none"><strong>Date:</strong> <span class="review-github-datetime">---</span></li>
+        </ul>
+      </div>
+      <div class="review-percentage_down"></div>
+      <ul class="review-checks list-group sm-gap"></ul>
+      <div class="review-comment"></div>
+    </div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="container-specs-modal-label" class="modal modal-lg fade" id="container-specs-modal" tabindex="-1"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="container-specs-modal-label">Recommended Sandbox</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;available&quot;:true,&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:2,&quot;csrfToken&quot;:&quot;KNeDJhJGmTn5h6L0jcNLLQDhOg-7o9EGr-dvqprqX0uiCmOTSk7Zy0xRe1csNWED6UOsRPvDIeP5D5udOl4OEQ&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary text-nowrap"><i aria-hidden="true" class="fa-solid fa-filter me-1"></i><span>Running only</span></a><input class="form-control" placeholder="Search for an image ..." type="search" value="" style="width: 100%;"></div><div class="mt-3"><h3>1 image<small class="ms-2">(0/2 Sandboxes spawned)</small></h3></div><div class="vstack gap-3 mt-3"><div class="card"><div class="card-body"><div class="hstack align-items-start flex-wrap justify-content-between"><div><h5 class="card-title mb-0"><i aria-hidden="true" class="fa-solid fa-terminal fa-fw text-danger"></i><span class="ms-2">Ubuntu 20.04</span></h5><h6 class="card-subtitle mb-0 mt-2 text-muted"><p>Basic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Foundations</p>
+</h6></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa-solid fa-play fa-fw me-1"></i><span>Run</span></a></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden="true" aria-labelledby="search-modal-label" class="modal fade" id="search-modal" tabindex="-1"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header d-block">    <div class="position-relative">
+      <input id="search-bar" autocomplete="off" type="text" placeholder="Search ...">
+    </div>
+</div><div class="modal-body">    <div class="spinner sm-gap">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+
+    <div class="vstack gap-4" id="search-results-container"></div>
+</div></div></div></div><div aria-hidden="true" aria-labelledby="markdown-guide-modal-label" class="modal modal-lg fade" id="markdown-guide-modal" tabindex="-1"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5" id="markdown-guide-modal-label">Markdown guide</h1><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body"><h4>Emphasis</h4>
+<pre>**<strong>bold</strong>**
+*<em>italics</em>*
+~~<strike>strikethrough</strike>~~</pre>
+<h4>Headers</h4>
+<pre># Big header
+## Medium header
+### Small header
+#### Tiny header</pre>
+<h4>Lists</h4>
+<pre>* Generic list item
+* Generic list item
+* Generic list item
+
+1. Numbered list item
+2. Numbered list item
+3. Numbered list item</pre>
+<h4>Links</h4>
+<pre>[Text to display](http://www.example.com)</pre>
+<h4>Quotes</h4>
+<pre>&gt; This is a quote.
+&gt; It can span multiple lines!</pre>
+<h4>Images</h4>
+<p>CSS style available: <code>width, height, opacity</code></p>
+<pre>![](http://www.example.com/image.jpg)
+![](http://www.example.com/image.jpg | width: 200px)
+![](http://www.example.com/image.jpg | height: 124px | width: 80px | opacity: 0.6)
+</pre>
+<h4>Tables</h4>
+<pre>| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John     | Doe      | Male     |
+| Mary     | Smith    | Female   |
+
+<em>Or without aligning the columns...</em>
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| John | Doe | Male |
+| Mary | Smith | Female |
+</pre>
+<h4>Displaying code</h4>
+<pre>`var example = "hello!";`
+
+<em>Or spanning multiple lines...</em>
+
+```
+var example = "hello!";
+alert(example);
+```</pre>
+</div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
